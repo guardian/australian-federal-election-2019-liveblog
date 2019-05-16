@@ -1,0 +1,102 @@
+<div class="mt">
+
+    <div class="mt-container">
+
+        <div class="mt-container__inner">
+
+            <div class="mt-section">
+
+            	<div class="timestampSocial">Last updated <span id="timeStamp">{{updated}}</span></div>
+
+		        <div id="seatstack" class="seatstack seatstack-2PP">
+
+					<div class="seatstack__summary">
+
+					    <div class="seatstack_majority-bars">
+
+					        <div class="seatstack__majority">{{MAJORITY_SEATS}} seats to win</div>
+
+					        <ul class="seatstack__bar seatstack__two-party">
+
+					            {{#twoParty}}
+
+					            <li>
+
+					                <div class="seatstack-party-name">
+
+					                    <h4 data-ticker="{{#lambda}}{{party}}{{/lambda}}">{{name}}</h4>
+
+										<div class="sprite" style="background-image: url('<%= path %>/assets/imgs/{{#lambda}}{{party}}{{/lambda}}.png');"></div>
+
+					                </div>
+
+					                <div class="seatstack-party-bar">
+
+					                    <div data-partyname="{{party}}" class="seatstack-party-bar-inner" style="width: {{percentage}}%"></div>
+
+					                    <div class="seatstack-party-seats">{{{seats}}} seats</div>
+
+					                </div>
+
+					            </li>
+
+					            {{/twoParty}}
+
+					        </ul>
+
+					    </div>
+
+					</div>
+
+					<div class="seatstack__detail">
+
+				        <ul class="seatstack-list seatstack-list--1">
+
+				            <li class="seatstack-list__item is-header">
+				                <span class="seatstack-list__seats is-header">{{header1}}</span>
+				            </li>
+				            
+						    {{#partyListLeft}}
+
+				            <li class="seatstack-list__item">
+				                <span class="seatstack-list__partybox" data-partyname="{{key}}"></span>
+				                <span class="seatstack-list__party-name">{{name}}</span>
+				                <span class="seatstack-list__party-short-name">{{shortName}}</span>
+				                <span class="seatstack-list__seats">{{{value}}}</span>
+				            </li>
+
+						    {{/partyListLeft}}
+
+						</ul>
+
+						<ul class="seatstack-list seatstack-list--2">
+
+		            		<li class="seatstack-list__item is-header">
+		                		<span class="seatstack-list__seats is-header">{{header2}}</span>
+		            		</li>
+
+					    	{{#partyListRight}}
+
+				            <li class="seatstack-list__item">
+				                <span class="seatstack-list__partybox" data-partyname="{{key}}"></span>
+				                <span class="seatstack-list__party-name">{{name}}</span>
+				                <span class="seatstack-list__party-short-name">{{shortName}}</span>
+				                <span class="seatstack-list__seats">{{{value}}}</span>
+				            </li>
+
+					    	{{/partyListRight}}
+
+					    </ul>
+
+					</div>
+
+		        </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
