@@ -7,15 +7,22 @@
 // Uncomment for full screen (including immersive article main media)
 //@import "fullscreen";
 
-.element-atom,
-.interactive-atom {
-    margin: 0 !important;
+html,
+body {
+    @include fs-bodyCopy(2);
+
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: white;
 }
+
 
 #electra {
 	width: 100%;
 	background-color: white;
 	display: inline-block;
+	overflow: hidden;
 }
 
 @import 'vars';
