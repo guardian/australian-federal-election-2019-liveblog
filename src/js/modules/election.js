@@ -10,7 +10,7 @@ export class Election {
 
         this.url = url
 
-        this.totalSeats = 150
+        this.totalSeats = 151
 
         this.database = {
 
