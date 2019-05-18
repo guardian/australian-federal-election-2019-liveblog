@@ -911,6 +911,11 @@
 
 }
 
+.contest__majority span {
+	font-family: "Guardian Text Sans Web", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 13px;
+}
+
 .contest__total {
 	margin-left: 10px;
 	font-size: 11px;
@@ -933,4 +938,12 @@
 
 .mt-mobile-outcome span {
 	font-weight: 600;
+}
+
+.timestampSocial {
+	font-family: "Guardian Text Sans Web", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 11px;
+	color: darkgrey;
+	padding: 10px;
+	line-height: 13px;
 }
