@@ -41,7 +41,7 @@ $seatstack-top: 30px !default;
 }
 
 .seatstack__summary {
-    margin-top: 35px;
+    margin-top: 25px;
     position: relative;
 }
 
@@ -270,7 +270,7 @@ $seatstack-list-lineheight: 24px;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    
     float: left;
 
     &.seatstack-list--2 {
@@ -284,7 +284,13 @@ $seatstack-list-lineheight: 24px;
     }
     @include mq($until: desktop) {
         margin-top: 20px;
+        font-size: 12px;
     }
+    @include mq($from: desktop) {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
 }
 .seatstack-list__item {
     vertical-align: middle;

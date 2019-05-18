@@ -1,102 +1,94 @@
 <div class="mt">
 
-    <div class="mt-container">
+	<div class="timestampSocial">
 
-        <div class="mt-container__inner">
+		<strong>{{votesCountedPercent}}%</strong> of Australia has voted<br/>
 
-            <div class="mt-section">
+		<span id="timeStamp">Last updated {{updated}} AEST</span>
 
-            	<div class="timestampSocial">Last updated <span id="timeStamp">{{updated}}</span></div>
+	</div>
 
-		        <div id="seatstack" class="seatstack seatstack-2PP">
+	<div class="seatstack seatstack-2PP" id="seatstack">
 
-					<div class="seatstack__summary">
+		<div class="seatstack__summary">
 
-					    <div class="seatstack_majority-bars">
+			<div class="seatstack_majority-bars">
 
-					        <div class="seatstack__majority">{{MAJORITY_SEATS}} seats to win</div>
+				<div class="seatstack__majority">{{MAJORITY_SEATS}} seats to win</div>
+				
+			        <ul class="seatstack__bar seatstack__two-party">
 
-					        <ul class="seatstack__bar seatstack__two-party">
+			            {{#twoParty}}
 
-					            {{#twoParty}}
+			            <li>
 
-					            <li>
+			                <div class="seatstack-party-name">
 
-					                <div class="seatstack-party-name">
+			                    <h4 data-ticker="{{party}}">{{name}}</h4>
 
-					                    <h4 data-ticker="{{party}}">{{name}}</h4>
+								<div class="sprite" style="background-image: url('http://interactive.guim.co.uk/2019/05/aus-election/images/{{party}}.png');"></div>
 
-										<div class="sprite" style="background-image: url('http://interactive.guim.co.uk/2019/05/aus-election/images/{{party}}.png');"></div>
+			                </div>
 
-					                </div>
+			                <div class="seatstack-party-bar">
 
-					                <div class="seatstack-party-bar">
+			                    <div data-partyname="{{party}}" class="seatstack-party-bar-inner" style="width: {{percentage}}%"></div>
 
-					                    <div data-partyname="{{party}}" class="seatstack-party-bar-inner" style="width: {{percentage}}%"></div>
+			                    <div class="seatstack-party-seats">{{{seats}}} seats</div>
 
-					                    <div class="seatstack-party-seats">{{{seats}}} seats</div>
+			                </div>
 
-					                </div>
+			            </li>
 
-					            </li>
+			            {{/twoParty}}
 
-					            {{/twoParty}}
+			        </ul>
+			</div>
+		</div>
 
-					        </ul>
+		<div class="seatstack__detail">
 
-					    </div>
+	        <ul class="seatstack-list seatstack-list--1">
 
-					</div>
+	            <li class="seatstack-list__item is-header">
+	                <span class="seatstack-list__seats is-header">{{header1}}</span>
+	            </li>
+	            
+			    {{#partyListLeft}}
 
-					<div class="seatstack__detail">
+	            <li class="seatstack-list__item">
+	                <span class="seatstack-list__partybox" data-partyname="{{key}}"></span>
+	                <span class="seatstack-list__party-name">{{name}}</span>
+	                <span class="seatstack-list__party-short-name">{{shortName}}</span>
+	                <span class="seatstack-list__seats">{{{value}}}</span>
+	            </li>
 
-				        <ul class="seatstack-list seatstack-list--1">
+			    {{/partyListLeft}}
 
-				            <li class="seatstack-list__item is-header">
-				                <span class="seatstack-list__seats is-header">{{header1}}</span>
-				            </li>
-				            
-						    {{#partyListLeft}}
+			</ul>
 
-				            <li class="seatstack-list__item">
-				                <span class="seatstack-list__partybox" data-partyname="{{key}}"></span>
-				                <span class="seatstack-list__party-name">{{name}}</span>
-				                <span class="seatstack-list__party-short-name">{{shortName}}</span>
-				                <span class="seatstack-list__seats">{{{value}}}</span>
-				            </li>
+			<ul class="seatstack-list seatstack-list--2">
 
-						    {{/partyListLeft}}
+        		<li class="seatstack-list__item is-header">
+            		<span class="seatstack-list__seats is-header">{{header2}}</span>
+        		</li>
 
-						</ul>
+		    	{{#partyListRight}}
 
-						<ul class="seatstack-list seatstack-list--2">
+	            <li class="seatstack-list__item">
+	                <span class="seatstack-list__partybox" data-partyname="{{key}}"></span>
+	                <span class="seatstack-list__party-name">{{name}}</span>
+	                <span class="seatstack-list__party-short-name">{{shortName}}</span>
+	                <span class="seatstack-list__seats">{{{value}}}</span>
+	            </li>
 
-		            		<li class="seatstack-list__item is-header">
-		                		<span class="seatstack-list__seats is-header">{{header2}}</span>
-		            		</li>
+		    	{{/partyListRight}}
 
-					    	{{#partyListRight}}
+		    </ul>
 
-				            <li class="seatstack-list__item">
-				                <span class="seatstack-list__partybox" data-partyname="{{key}}"></span>
-				                <span class="seatstack-list__party-name">{{name}}</span>
-				                <span class="seatstack-list__party-short-name">{{shortName}}</span>
-				                <span class="seatstack-list__seats">{{{value}}}</span>
-				            </li>
+		</div>
 
-					    	{{/partyListRight}}
-
-					    </ul>
-
-					</div>
-
-		        </div>
-
-            </div>
-
-        </div>
-
-    </div>
+	</div>
 
 </div>
 
